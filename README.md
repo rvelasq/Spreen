@@ -20,7 +20,7 @@
 #### 1. Clone repository
 
 ```
-git clone https://github.com/IshaanOhri/Spreen
+git clone https://github.com/rvelasq/Spreen
 ```
 
 #### 2. Start Spreen server
@@ -65,7 +65,7 @@ Any contributions you make are **greatly appreciated**.
 
 The project is distributed under the MIT License. See [LICENSE](https://github.com/IshaanOhri/Spreen/blob/master/LICENSE) for more information.
 
-## Author
+## Original Author
 
 - [Ishaan Ohri](https://github.com/IshaanOhri)
 
