@@ -3,7 +3,7 @@ version: '3.5'
 services:
   spreen:
     container_name: spreen
-    image: supermamon/spreen
+    image: rvelasq/spreen
     restart: always
     ports:
       - 3000:3000
