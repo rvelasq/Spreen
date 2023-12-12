@@ -13,7 +13,7 @@ import path from 'path';
 import { createServer } from 'http';
 import { Server, Socket } from 'socket.io';
 import { router } from './api/routes';
-import { PORT, HOST } from './config';
+import { PORT, HOST, BASEURL } from './config';
 import logger from './log/config';
 
 // Initializing Express App
@@ -51,5 +51,6 @@ app.use(router);
 
 // Start Express App
 server.listen(PORT, HOST, () => {
-	logger.info(`🚀 Server running on http://${HOST}:${PORT} 🚀`);
+	const baseurl = BASEURL ?? `http://${HOST}:${PORT}`;
+	logger.info(`🚀 Server running on ${baseurl}  🚀`);
 });

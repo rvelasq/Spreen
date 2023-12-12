@@ -8,11 +8,17 @@
 
 import { NextFunction, Request, Response } from 'express';
 const { networkInterfaces } = require('os');
+import { PORT, BASEURL } from '../../config';
 
 // Home route
 const home = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
 	const nets = networkInterfaces();
 	const results = Object.create(null);
+
+	if (BASEURL) {
+		res.render('home', { baseurl: BASEURL });
+		return;
+	}
 
 	// eslint-disable-next-line no-restricted-syntax
 	for (const name of Object.keys(nets)) {
@@ -23,7 +29,8 @@ const home = async (req: Request, res: Response, next: NextFunction): Promise<vo
 					results[name] = [];
 				}
 				results[name].push(net.address);
-				res.render('home', { ip: results[name][0] });
+				const baseurl = `http://${results[name][0]}:${PORT}`;
+				res.render('home', { baseurl });
 			}
 		}
 	}

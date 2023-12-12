@@ -9,3 +9,4 @@
 export const NODE_ENV: string = String(process.env.NODE_ENV);
 export const PORT: number = Number(process.env.PORT);
 export const HOST: string = String(process.env.HOST);
+export const BASEURL: string = String(process.env.BASEURL);
