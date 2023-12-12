@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  spreen:
+    container_name: spreen
+    image: supermamon/spreen
+    restart: always
+    ports:
+      - 3000:3000
+#    environment:
+#      - HOST=     # optional. defaults to 0.0.0.0
+#      - PORT=     # optional. defaults to 3000
+#      - BASEURL=  # optional. provide if exposing to public. example. https:/spreen.mydomain.com
